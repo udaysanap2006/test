@@ -1,0 +1,7 @@
+@import "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css";
+
+.zoneContent{
+  margin: 10px;
+}
+.fullDetails{float:right;font-size: 12px;padding: 5px;cursor: pointer;}
+.textColor{color:#767676}
