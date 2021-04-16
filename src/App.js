@@ -1,7 +1,3 @@
-import './App.css';
-import SelectTimeZone from './components/SelectTimeZone';
-import CardComponent from './components/CardComponent';
-import OnceLoadashImplentation from './components/OnceLoadashImplentation'
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -9,6 +5,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SelectTimeZone from './components/SelectTimeZone';
+import CardComponent from './components/CardComponent';
+import OnceLoadashImplentation from './components/OnceLoadashImplentation'
+import './App.css';
 
 
 export default function App() {

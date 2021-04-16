@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import * as ConstStrings from './fileWithConstants';
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 
-const StyledRequestDetails = styled.div`  
-  
+const StyledRequestDetails = styled.div` 
 `
 const RequestRefs = styled.p`
 font-size: 10px;
@@ -16,7 +16,7 @@ padding-left:5px;
 line-height: initial;
 `
 
-const Cat = styled.p`
+const Category = styled.p`
 width: 70px;
 font-size: 10px;
 color: #252525;
@@ -37,13 +37,13 @@ line-height: initial;
 
 const RequestTitle = ({
     requestRef,
-    cat,
+    category,
     status
 }) => (
   <StyledRequestDetails>
-    <RequestRefs><span className="textColor">Request reference</span> {requestRef}</RequestRefs>
-    <Cat><span className="textColor">Category</span> {cat}</Cat>
-    <Status><span className="textColor">Request Status</span><br /><BsFillExclamationCircleFill /> {status}</Status>
+    <RequestRefs><span className="textColor">{ConstStrings.REQUEST_REF}</span> {requestRef}</RequestRefs>
+    <Category><span className="textColor">{ConstStrings.CATEGORY}</span> {category}</Category>
+    <Status><span className="textColor">{ConstStrings.REQUEST_STATUS}</span><br /><BsFillExclamationCircleFill /> {status}</Status>
   </StyledRequestDetails>
 )
 

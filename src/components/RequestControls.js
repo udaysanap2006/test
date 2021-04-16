@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { BsFillEnvelopeFill, BsFillInboxFill} from "react-icons/bs";
 
 const StyledRequestControls = styled.div`
     text-align:right;
@@ -12,12 +13,13 @@ margin: 17px 0px 11px 0px;
 const Action = styled.button`
   margin:1px;
  `
-const RequestControls = ({actions}) => (
+const RequestControls = () => (
   <StyledRequestControls>
     <Actions>
-    {actions.map(({ label }) => (
-        <Action>{label}</Action>
-      ))}
+      <Action><BsFillEnvelopeFill /></Action>
+      <Action><BsFillInboxFill /></Action>
+      <Action>Reject</Action>
+      <Action>Authorize</Action>
     </Actions>
   </StyledRequestControls>
 )

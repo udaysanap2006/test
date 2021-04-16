@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { BsChevronDown} from "react-icons/bs";
 import RequestControls from './RequestControls'
 import RequestTitle from './RequestTitle'
 import RequestDetails from './RequestDetails'
-import { BsFillEnvelopeFill, BsFillInboxFill,BsChevronDown} from "react-icons/bs";
+
 
 const StyledContainer = styled.div`
   border:  1px solid #252525;
@@ -14,36 +15,6 @@ const StyledContainer = styled.div`
 `
 
 const CardComponent = () => {
-    const buttons = [
-        {
-          label: (
-            <>
-              <BsFillEnvelopeFill /> 
-            </>
-          ),
-        },
-        {
-            label: (
-              <>
-                <BsFillInboxFill /> 
-              </>
-            ),
-          },
-          {
-            label: (
-              <>
-                Reject
-              </>
-            )
-          },
-          {
-            label: (
-              <>
-                Authorize
-              </>
-            )
-          },
-      ]
   return (
       <StyledContainer>
         <div>
@@ -51,10 +22,10 @@ const CardComponent = () => {
             title="Cancel / recall payment, GBP 1,000.00"
             subtitle="1234567890123456 (GB), KUIML Business Company"
             />
-            <RequestControls actions={buttons}/>
+            <RequestControls />
          </div>
          <div>
-             <RequestDetails requestRef='SET29383ABCH' cat='Payment' status='Pending Authorization' />
+             <RequestDetails requestRef='SET29383ABCH' category='Payment' status='Pending Authorization' />
              <span className="fullDetails">Full details <BsChevronDown /></span>
          </div>
          
